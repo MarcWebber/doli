@@ -109,4 +109,12 @@ declare namespace API {
     /** User Status */
     userStatus?: number;
   };
+
+  type Message = {
+    id?: number;
+    date?: string;
+    message?: string;
+    sender?: string;
+    receiver?: string;
+  }
 }
