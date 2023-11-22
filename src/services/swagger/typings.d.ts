@@ -109,4 +109,25 @@ declare namespace API {
     /** User Status */
     userStatus?: number;
   };
+
+  /**
+   * @description This is for robots(Advisors) to give advice to users
+   */
+
+  type Advisor = {
+    id?: number;
+    advisorName?: string;
+    advisorType?: string;
+    advisorDescription?: string;
+    advisorStatus?: string;
+  }
+  type getAdviceParams = {
+    /** ID of advisor that needs to be asked */
+    advisorId: number;
+    message: string;
+    botId: number;
+  };
+
+
+
 }

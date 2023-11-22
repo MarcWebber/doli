@@ -60,4 +60,10 @@ export default [
     layout: false,
     component: './404',
   },
+  {
+    name:'advisor',
+    icon:'smile',
+    path:'/advisor',
+    component:'./Advisor'
+  }
 ];

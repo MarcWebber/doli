@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Ant Design Pro",
+    "title": "Doli API",
     "version": "1.0.0"
   },
   "servers": [
@@ -13,6 +13,25 @@
     }
   ],
   "paths": {
+    "/api/adivce": {
+      "get": {
+        "tags": ["api"],
+        "description": "获取建议列表",
+        "operationId": "adivce",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdivceList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/currentUser": {
       "get": {
         "tags": ["api"],
@@ -298,7 +317,23 @@
     }
   },
   "components": {
+
     "schemas": {
+      "AdviceList": {
+        "type": "object",
+        "properties": {
+          //TODO: CHANGE THIS TO PROPER CONFIG
+          "list": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdviceListItem"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        }
+      },
       "CurrentUser": {
         "type": "object",
         "properties": {
