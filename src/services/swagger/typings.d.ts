@@ -110,6 +110,7 @@ declare namespace API {
     userStatus?: number;
   };
 
+
   /**
    * @description This is for robots(Advisors) to give advice to users
    */
@@ -127,7 +128,4 @@ declare namespace API {
     message: string;
     botId: number;
   };
-
-
-
 }

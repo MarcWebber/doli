@@ -1,8 +1,10 @@
 // import React,{useState,useRef} from 'react';
-import React from 'react';
-import {PageContainer} from "@ant-design/pro-components";
+
+import React, { useState } from 'react';
+import {PageContainer, useIntl} from "@ant-design/pro-components";
 // import {useIntl} from "@umijs/max";
 import ChatBot from "@/pages/Advisor/components/ChatBot";
+
 // const handleSendMessage = (message) => {
 //   console.log(message);
 // }
@@ -10,15 +12,14 @@ import ChatBot from "@/pages/Advisor/components/ChatBot";
 
 const Advisor: React.FC = () => {
 
-  // const [createModalOpen, handleModalOpen] = useState<boolean>(false);
-  //
-  // const intl=useIntl();
 
+  const [createModalOpen, handleModalOpen] = useState<boolean>(false);
+
+  const intl=useIntl();
   return (
     <PageContainer>
       <div>
         <ChatBot/>
-
       </div>
     </PageContainer>
   );
