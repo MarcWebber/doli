@@ -2,15 +2,13 @@ import {useState} from "react";
 import {useIntl} from "@umijs/max";
 import {Avatar, Badge, Card} from "antd";
 
-export type Message = {
-  sender: string;
-  text: string;
-  date?: string;
+export type ChatBoxProps = {
+  message: Message;
 }
 
 
 
-const ChatBox:React.FC = (message:Message) => {
+const ChatBox:React.FC<ChatBoxProps> = ({message}) => {
 
   //get the current language
 
@@ -25,7 +23,7 @@ const ChatBox:React.FC = (message:Message) => {
 
   return(
     <div>
-      <Avatar style={{ backgroundColor: styles.backgroundColor, verticalAlign: 'middle' }} size="large" gap={gap}>
+      <Avatar style={{ backgroundColor: styles.backgroundColor, verticalAlign: 'middle' }} size="large">
         {message.sender}
       </Avatar>
       <Badge.Ribbon text="Hippies">

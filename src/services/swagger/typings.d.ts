@@ -128,4 +128,12 @@ declare namespace API {
     message: string;
     botId: number;
   };
+
+  type Message = {
+    message?: string;
+    sender?: string;
+    date?: string;
+  }
 }
+
+

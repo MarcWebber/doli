@@ -1,19 +1,17 @@
 import {useState, useEffect} from 'react';
 import {Button, Input, message} from 'antd';
 import {useIntl} from "@umijs/max";
+import ChatBox from "@/pages/Advisor/components/ChatBox";
 
-type Message = {
-  sender: string;
-  text: string;
-  data?: any;
-}
+
 
 //TODO: FINISH THIS PART
 const ChatBot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'dodo',
-      text: 'hello',
+      text: 'Hello, I am Dodo, your advisor. How can I help you?',
+      date: '2021-10-10',
     },
   ]);
   const [input, setInput] = useState('');
@@ -47,8 +45,7 @@ const ChatBot: React.FC = () => {
       {/* Display messages */}
       {messages.map((message, index) => (
         <div key={index}>
-          <span>{message.sender}: </span>
-          <span>{message.text}</span>
+          <ChatBox message={message}/>
         </div>)
       )}
 

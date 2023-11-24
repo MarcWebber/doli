@@ -322,15 +322,12 @@
       "AdviceList": {
         "type": "object",
         "properties": {
-          //TODO: CHANGE THIS TO PROPER CONFIG
           "list": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/AdviceListItem"
             }
           },
           "pagination": {
-            "$ref": "#/components/schemas/Pagination"
           }
         }
       },
