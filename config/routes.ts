@@ -65,5 +65,12 @@ export default [
     icon:'smile',
     path:'/advisor',
     component:'./Advisor'
+  },
+
+  {
+    name:'topics',
+    icon:'smile',
+    path:'/topics',
+    component:'./Topics'
   }
 ];

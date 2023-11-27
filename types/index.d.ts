@@ -118,3 +118,9 @@ export namespace API {
     currentAuthority: string;
   };
 }
+
+export namespace Topics{
+  export type GET_API_TOPICS_QUERY = {
+
+  }
+}
