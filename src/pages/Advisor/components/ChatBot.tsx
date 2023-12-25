@@ -1,8 +1,19 @@
 import {useState, useEffect} from 'react';
-import {Button, Input, message} from 'antd';
+import {Input, message,Space,Button,Select} from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 import {useIntl} from "@umijs/max";
 import ChatBox from "@/pages/Advisor/components/ChatBox";
-
+const { Search } = Input;
+const options = [
+  {
+    value: 'zhejiang',
+    label: 'Zhejiang',
+  },
+  {
+    value: 'jiangsu',
+    label: 'Jiangsu',
+  },
+];
 
 
 //TODO: FINISH THIS PART
@@ -13,6 +24,16 @@ const ChatBot: React.FC = () => {
       text: 'Hello, I am Dodo, your advisor. How can I help you?',
       date: '2021-10-10',
     },
+    {
+      sender: 'dodo',
+      text: 'Hello, Are you there?',
+      date: '2021-10-10',
+    },
+    {
+      sender: 'webrainer',
+      text: 'Yes, I am here.',
+      date: '2021-10-10',
+    }
   ]);
   const [input, setInput] = useState('');
   const [isChatBotOn, setIsChatBotOn] = useState(false);
@@ -49,14 +70,22 @@ const ChatBot: React.FC = () => {
         </div>)
       )}
 
+      <br/>
       {/* Input */}
-      <Input placeholder="Type a message..." value={input} onChange={handleInputChange}/>
-      {/* Send button */}
-      <Button type="primary" key="primary" onClick={handleSendMessage}>
-        {intl.formatMessage({id: 'pages.advisor.send'})}
-      </Button>
-      {/* Chat bot on/off button */}
-      <Button type="primary" key="primary" onClick={handleChatBotOn}></Button>
+      <Space direction="vertical" size="middle">
+
+
+
+        <Space.Compact style={{ width: '100%' }}>
+          <Input defaultValue="Combine input and button" />
+          <Button type="primary">Submit</Button>
+        </Space.Compact>
+
+        <Space.Compact size="large">
+          <Input addonBefore={<SearchOutlined />} placeholder="large size" />
+          <Input placeholder="another input" />
+        </Space.Compact>
+      </Space>
     </div>
   );
 }
