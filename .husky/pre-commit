@@ -1,4 +1,15 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+current_branch=$(git symbolic-ref --short HEAD)
+
+# 检查当前分支是否为 prod 分支
+if [ "$current_branch" = "prod" ]; then
+  # echo "prod 分支"
+  echo "prod 需要检查"
+  . "$(dirname "$0")/_/husky.sh"
+
+  # Export Git hook params
+  export GIT_PARAMS=$*
+  npx --no-install fabric verify-commit
+fi
 
 npx --no-install lint-staged

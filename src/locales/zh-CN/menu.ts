@@ -50,4 +50,6 @@ export default {
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
   "menu.advisor": "多多顾问",
+  "menu.topics": "多多话题",
+  "menu.note": "多多笔记",
 };

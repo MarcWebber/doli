@@ -68,4 +68,7 @@ export default {
   'pages.advisor.title': 'dodo assistant',
   'pages.advisor.description': 'dodo assistant is a tool to help you find the best solution.',
   'pages.advisor.sendbutton': 'send',
+  'pages.advisor.sendplaceholder': 'please input your question',
+  'pages.topic.title': 'dodo topic',
+  'pages.note.title': 'dodo note',
 };

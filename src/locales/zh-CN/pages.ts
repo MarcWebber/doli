@@ -65,4 +65,7 @@ export default {
   'pages.advisor.title': '多多顾问',
   'pages.advisor.description': '多多顾问是一个智能化投资平台，为您提供专业的投资建议。',
   'pages.advisor.sendbutton': '发送',
+  'pages.advisor.sendplaceholder': '请输入您的问题',
+  'pages.topic.title': '话题多多',
+  'pages.note.title': '多多笔记',
 };

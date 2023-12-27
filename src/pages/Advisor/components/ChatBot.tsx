@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react';
-import {Input, message,Space,Button,Select} from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import {Input, message, Space, Button, Select} from 'antd';
+import {SearchOutlined} from '@ant-design/icons';
 import {useIntl} from "@umijs/max";
 import ChatBox from "@/pages/Advisor/components/ChatBox";
-const { Search } = Input;
+
+const {Search} = Input;
 const options = [
   {
     value: 'zhejiang',
@@ -37,7 +38,7 @@ const ChatBot: React.FC = () => {
   ]);
   const [input, setInput] = useState('');
   const [isChatBotOn, setIsChatBotOn] = useState(false);
-  const intl= useIntl();
+  const intl = useIntl();
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);
   }
@@ -72,20 +73,23 @@ const ChatBot: React.FC = () => {
 
       <br/>
       {/* Input */}
-      <Space direction="vertical" size="middle">
+      {/*<Space direction="vertical">*/}
 
 
+      <Space.Compact style={{width: '100%'}}>
+        <Input addonBefore={<Space>
+          <SearchOutlined/>
+          {/*TODO: THE SECOND BUTTON IS FOR CLEANING UP*/}
+          <SearchOutlined/>
+        </Space>} defaultValue="Combine input and button"/>
+        <Button type="primary">Submit</Button>
+      </Space.Compact>
 
-        <Space.Compact style={{ width: '100%' }}>
-          <Input defaultValue="Combine input and button" />
-          <Button type="primary">Submit</Button>
-        </Space.Compact>
-
-        <Space.Compact size="large">
-          <Input addonBefore={<SearchOutlined />} placeholder="large size" />
-          <Input placeholder="another input" />
-        </Space.Compact>
-      </Space>
+      {/*<Space.Compact size="large">*/}
+      {/*  <Input addonBefore={<SearchOutlined />} placeholder="large size" />*/}
+      {/*  <Input placeholder="another input" />*/}
+      {/*</Space.Compact>*/}
+      {/*</Space>*/}
     </div>
   );
 }

@@ -61,23 +61,30 @@ export default [
     component: './404',
   },
   {
-    name:'advisor',
-    icon:'smile',
-    path:'/advisor',
-    component:'./Advisor'
+    name: 'advisor',
+    icon: 'smile',
+    path: '/advisor',
+    component: '@/pages/Advisor'
   },
 
   {
-    name:'topics',
-    icon:'smile',
-    path:'/topics',
-    component:'./Topics'
+    name: 'topics',
+    icon: 'smile',
+    path: '/topics',
+    component: '@/pages/Topics'
   },
 
   {
-    name:'note',
-    icon:'smile',
-    path:'/note',
-    component:'./Note'
+    name: 'note',
+    icon: 'smile',
+    path: '/note/:slug',
+    component: '@/pages/Note/$slug.tsx'
+  },
+
+  {
+    name: 'detail',
+    icon: 'smile',
+    path: '/detail/:slug',
+    component: '@/pages/Detail/$slug.tsx'
   }
 ];

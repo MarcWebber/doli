@@ -12,7 +12,6 @@ import ChatBot from "@/pages/Advisor/components/ChatBot";
 
 const Advisor: React.FC = () => {
 
-
   const [createModalOpen, handleModalOpen] = useState<boolean>(false);
 
   const intl=useIntl();
